@@ -11,7 +11,7 @@ const posts = [
     title: 'Weekly Outfit',
     description:
       "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'assets/image/features-1.jpg',
+    image: 'assets/image/carousel-1.png',
     imageText: 'main image description',
     linkText: 'Continue reading…',
   },
@@ -19,7 +19,7 @@ const posts = [
     title: 'Title of a ',
     description:
       "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'assets/image/features-2.jpg',
+    image: 'assets/image/carousel-2.png',
     imageText: 'main image description',
     linkText: 'Continue reading…',
   },
@@ -40,7 +40,6 @@ export default function Home() {
       })
       .catch((error) => console.log(error.message));
   }, []);
-
   return (
     <>
       <Container>

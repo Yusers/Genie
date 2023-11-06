@@ -1,7 +1,7 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const { Configuration, OpenAIApi } = require("openai");
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const { Configuration, OpenAIApi } = require('openai');
 
 const config = new Configuration({
   apiKey: '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',
@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/chat", async (req, res) => {
+app.post('/chat', async (req, res) => {
   const { prompt } = req.body;
   const completion = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
