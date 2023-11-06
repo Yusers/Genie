@@ -1,0 +1,19 @@
+.carousel-slide {
+  display: flex;
+}
+
+.carousel-slide img {
+  display: none;
+}
+
+.carousel-slide.transition {
+  transition: transform 0.5s;
+}
+
+.carousel-slide.left-slide {
+  transform: translateX(-100%);
+}
+
+.carousel-slide.right-slide {
+  transform: translateX(100%);
+}
