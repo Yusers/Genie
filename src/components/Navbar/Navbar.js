@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -10,10 +10,35 @@ import Badge from '@mui/material/Badge'; // Added Badge component
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'; // Added ShoppingCartIcon
 import { Link as BrowserLink } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext';
+import { toast } from 'react-toastify';
 
 function Navbar(props) {
   const { sections, title } = props;
   const { cartItems } = useCart();
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    const handleOnline = () => {
+      setIsOnline(true);
+    };
+    const handleOffline = () => {
+      setIsOnline(false);
+    };
+
+    if (isOnline) {
+      toast.success('Kết nối thành công');
+    } else {
+      toast.error('Mất kết nối mạng', { autoClose: 10000 });
+    }
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, [isOnline]);
 
   return (
     <React.Fragment>

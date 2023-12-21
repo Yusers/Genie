@@ -11,7 +11,7 @@ import ChatBoxBtn from './components/ChatBoxBtn/ChatBoxBtn';
 import Checkout from './pages/Checkout';
 import { CartProvider } from './components/CartContext/CartContext';
 import Cart from './pages/Cart';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const sections = [

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Parallax from '../components/Parallax/Parallax';
 import MainFeatures from '../components/MainFeatures/MainFeatures';
 import CardProduct from '../components/CardProduct/CardProduct';
-import { CircularProgress, Container, Grid, Typography } from '@mui/material';
+import { LinearProgress, Container, Grid, Typography } from '@mui/material';
+import { toast } from 'react-toastify';
 
 const baseUrl = 'https://65487df3dd8ebcd4ab22f4d0.mockapi.io/products';
 
@@ -40,6 +41,7 @@ export default function Home() {
       })
       .catch((error) => console.log(error.message));
   }, []);
+
   return (
     <>
       <Container>
@@ -52,7 +54,7 @@ export default function Home() {
           {isLoading ? (
             <Grid item alignItems={'center'} xs={12}>
               <Typography variant='h2' color={'inherit'}>
-                <CircularProgress />
+                <LinearProgress />
               </Typography>
             </Grid>
           ) : (
