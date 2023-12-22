@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Parallax from '../components/Parallax/Parallax';
 import MainFeatures from '../components/MainFeatures/MainFeatures';
 import CardProduct from '../components/CardProduct/CardProduct';
 import { LinearProgress, Container, Grid, Typography } from '@mui/material';
-import { toast } from 'react-toastify';
 
-const baseUrl = 'https://65487df3dd8ebcd4ab22f4d0.mockapi.io/products';
+const baseUrl = 'http://localhost:8081/api/product';
 
 const posts = [
   {

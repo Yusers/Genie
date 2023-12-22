@@ -6,7 +6,7 @@ import PriceRangeFilter from '../components/PriceRangeFilter/PriceRangeFilter';
 import { useCart } from '../components/CartContext/CartContext';
 
 export default function Products() {
-  const baseUrl = 'https://65487df3dd8ebcd4ab22f4d0.mockapi.io/products';
+  const baseUrl = 'http://localhost:8081/api/product';
   const [apiData, setApiData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
@@ -51,32 +51,17 @@ export default function Products() {
         <PriceRangeFilter priceRange={priceRange} onPriceChange={handlePriceChange} />
       </Typography>
       <Grid container spacing={4}>
-        {isLoading ? (
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-              zIndex: 9999,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <CircularProgress sx={{ color: 'white' }} />
-          </div>
-        ) : (
-          filteredData.map((data) => (
-            <Grid key={data.id} item xs={12} sm={6} md={4} lg={3}>
-              <CardProduct
-                product={data}
-              />
-            </Grid>
-          ))
-        )}
+        {isLoading
+          ? [1, 2, 3, 4, 5, 6, 7, 8].map((data) => (
+              <Grid key={data} item xs={12} sm={6} md={4} lg={3}>
+                <CardProduct isLoading={isLoading} product={data} />
+              </Grid>
+            ))
+          : filteredData.map((data) => (
+              <Grid key={data.id} item xs={12} sm={6} md={4} lg={3}>
+                <CardProduct product={data} />
+              </Grid>
+            ))}
       </Grid>
     </>
   );

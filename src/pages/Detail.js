@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {useCart} from '../components/CartContext/CartContext';
+import { useCart } from '../components/CartContext/CartContext';
 
 import {
   Paper,
@@ -55,11 +55,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 const Detail = () => {
   const { id } = useParams();
   const [apiData, setApiData] = useState({});
-  const baseURL = `https://65487df3dd8ebcd4ab22f4d0.mockapi.io/products/${id}`;
+  const baseURL = `http://localhost:8081/api/product/${id}`;
   const [selectedSize, setSelectedSize] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  const {addToCart} = useCart();
+  const { addToCart } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -86,7 +86,7 @@ const Detail = () => {
 
   const handleAddToCart = (product) => {
     // Add logic to add the selected product to the cart
-    toast.success("Thêm vào giỏ hàng thành công");
+    toast.success('Thêm vào giỏ hàng thành công');
     addToCart(product);
   };
 
@@ -181,7 +181,7 @@ const Detail = () => {
                 <Button
                   variant='contained'
                   color='primary'
-                  onClick={()=>handleAddToCart(apiData)}
+                  onClick={() => handleAddToCart(apiData)}
                   style={{ margin: '8px' }}
                 >
                   Add to Cart
