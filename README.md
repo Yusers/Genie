@@ -19,7 +19,9 @@ Features:
 ![image](https://github.com/Yusers/Genie/assets/84740063/45b6217e-b48a-44e2-bb2b-5b73fd0699b4)
 --------------------------------------------- ============== ---------------------------------------------
   - Adding to Cart will render a notification using react toastify
+
 ![image](https://github.com/Yusers/Genie/assets/84740063/9bec54eb-6ff9-4ed2-907e-dc62f59f41e7)
+
 --------------------------------------------- ============== ---------------------------------------------
   - Cart view detail
 ![image](https://github.com/Yusers/Genie/assets/84740063/5005db60-ccc4-4411-90ad-1dbf0510e70a)
