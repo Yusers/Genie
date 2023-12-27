@@ -19,15 +19,20 @@ Our Products Page:
 Features:
   - Fitler: using custom hook to filter products.
 ![image](https://github.com/Yusers/Genie/assets/84740063/45b6217e-b48a-44e2-bb2b-5b73fd0699b4)
+
 --------------------------------------------- ============== ---------------------------------------------
+
   - Adding to Cart will render a notification using react toastify
 
 ![image](https://github.com/Yusers/Genie/assets/84740063/9bec54eb-6ff9-4ed2-907e-dc62f59f41e7)
 
 --------------------------------------------- ============== ---------------------------------------------
+
   - Cart view detail
 ![image](https://github.com/Yusers/Genie/assets/84740063/5005db60-ccc4-4411-90ad-1dbf0510e70a)
+
 --------------------------------------------- ============== ---------------------------------------------
+
   - Checkout
 ![image](https://github.com/Yusers/Genie/assets/84740063/9623c922-ad20-44fc-b8b5-3f10cdec0460)
 
