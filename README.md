@@ -3,6 +3,7 @@
 Front-End Section:
 
 This is Frontend for this website look like:
+
 Home Page:
   - Top Page:
 ![image](https://github.com/Yusers/Genie/assets/84740063/028f77bf-b85f-4f0d-8d2c-d43db597a163)
