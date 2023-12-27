@@ -14,6 +14,7 @@ Home Page:
   - Bottom Home Page:
 ![image](https://github.com/Yusers/Genie/assets/84740063/1dd7e4c0-3b84-428a-b224-ed6587ca049e)
 --------------------------------------------- ============== ---------------------------------------------
+
 Our Products Page:
 Features:
   - Fitler: using custom hook to filter products.
