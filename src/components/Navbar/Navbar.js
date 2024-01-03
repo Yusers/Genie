@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge'; // Added Badge component
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'; // Added ShoppingCartIcon
-import { Link as BrowserLink } from 'react-router-dom';
+import { Link as BrowserLink, useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext';
 import { toast } from 'react-toastify';
 
@@ -16,6 +16,7 @@ function Navbar(props) {
   const { sections, title } = props;
   const { cartItems } = useCart();
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleOnline = () => {
@@ -43,8 +44,12 @@ function Navbar(props) {
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size='small' sx={{ display: { xs: 'none', sm: 'block' } }}>
-          Subscribe
+        <Button
+          onClick={() => navigate('/sign-up')}
+          size='small'
+          sx={{ display: { xs: 'none', sm: 'block' } }}
+        >
+          Sign Up
         </Button>
 
         <Typography
@@ -54,10 +59,9 @@ function Navbar(props) {
           align='center'
           noWrap
           sx={{ flex: 1 }}
+          onClick={() => navigate('/')}
         >
-          <BrowserLink style={{ textDecoration: 'none', color: 'inherit' }} to='/'>
-            {title}
-          </BrowserLink>
+          {title}
         </Typography>
         <IconButton sx={{ fontSize: 'small' }}>
           <SearchIcon />
@@ -69,8 +73,8 @@ function Navbar(props) {
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
-        <Button variant='outlined' size='small'>
-          Sign up
+        <Button onClick={() => navigate('/sign-in')} variant='outlined' size='small'>
+          Sign In
         </Button>
       </Toolbar>
       <Toolbar
@@ -79,11 +83,22 @@ function Navbar(props) {
         sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
       >
         {sections.map((section) => (
-          <BrowserLink to={section.url} style={{ color: 'black' }} key={section.title}>
-            <Link color='inherit' noWrap variant='body2' sx={{ p: 1, flexShrink: 0 }}>
-              {section.title}
-            </Link>
-          </BrowserLink>
+          <Link
+            onClick={() => navigate(section.url)}
+            key={section.title}
+            color='inherit'
+            noWrap
+            variant='body2'
+            sx={{
+              p: 1,
+              flexShrink: 0,
+              '&:hover': {
+                cursor: 'pointer',
+              },
+            }}
+          >
+            {section.title}
+          </Link>
         ))}
       </Toolbar>
     </React.Fragment>

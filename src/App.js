@@ -13,6 +13,8 @@ import { CartProvider } from './components/CartContext/CartContext';
 import Cart from './pages/Cart';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 const sections = [
   { title: 'Home', url: '/' },
@@ -47,6 +49,8 @@ function App() {
           <hr />
           <Routes>
             <Route path='/' element={<Home />}></Route>
+            <Route path='/sign-in' element={<SignIn />}></Route>
+            <Route path='/sign-up' element={<SignUp />}></Route>
             <Route path='/products' element={<Products />}></Route>
             <Route path='/products/:id' element={<Detail />}></Route>
             <Route path='/weekly-outfit' element={<WeeklyOutfit />}></Route>
