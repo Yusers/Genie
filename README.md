@@ -1,71 +1,53 @@
-# Getting Started with Create React App
+# This website is making Front End is Reactjs and Backend is Spring boot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front-End Section:
 
-## Available Scripts
+This is Frontend for this website look like:
 
-In the project directory, you can run:
+Home Page:
+  - Top Page:
+![image](https://github.com/Yusers/Genie/assets/84740063/028f77bf-b85f-4f0d-8d2c-d43db597a163)
+--------------------------------------------- ============== ---------------------------------------------
+  - Middle Home Page:
+![image](https://github.com/Yusers/Genie/assets/84740063/ef54825b-51de-4143-a5e1-ad1f90587abf)
+--------------------------------------------- ============== ---------------------------------------------
+  - Bottom Home Page:
+![image](https://github.com/Yusers/Genie/assets/84740063/1dd7e4c0-3b84-428a-b224-ed6587ca049e)
+--------------------------------------------- ============== ---------------------------------------------
 
-### `npm start`
+Our Products Page:
+Features:
+  - Fitler: using custom hook to filter products.
+![image](https://github.com/Yusers/Genie/assets/84740063/45b6217e-b48a-44e2-bb2b-5b73fd0699b4)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+--------------------------------------------- ============== ---------------------------------------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Adding to Cart will render a notification using react toastify
 
-### `npm test`
+![image](https://github.com/Yusers/Genie/assets/84740063/9bec54eb-6ff9-4ed2-907e-dc62f59f41e7)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--------------------------------------------- ============== ---------------------------------------------
 
-### `npm run build`
+  - Cart view detail
+![image](https://github.com/Yusers/Genie/assets/84740063/5005db60-ccc4-4411-90ad-1dbf0510e70a)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--------------------------------------------- ============== ---------------------------------------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Checkout
+![image](https://github.com/Yusers/Genie/assets/84740063/9623c922-ad20-44fc-b8b5-3f10cdec0460)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+--------------------------------------------- ============== ---------------------------------------------
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+BackEnd Section:
+source BackEnd: https://github.com/Yusers/Server_Genie
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is backend for this website:
+Server is already have some services:
+- Product API CRUD
+- Database: MySQL
+- Diagram: ![image](https://github.com/Yusers/Genie/assets/84740063/c9a993d0-34bc-450c-acbd-4fe786a21534)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Genie" 
